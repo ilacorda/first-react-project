@@ -1,8 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import {
+  StyleSheet
+}
+from 'react-native';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+export default StyleSheet.create({
+  body: {
+    margin: [{
+      unit: 'px',
+      value: 0
+    }, {
+      unit: 'px',
+      value: 0
+    }, {
+      unit: 'px',
+      value: 0
+    }, {
+      unit: 'px',
+      value: 0
+    }],
+    padding: [{
+      unit: 'px',
+      value: 0
+    }, {
+      unit: 'px',
+      value: 0
+    }, {
+      unit: 'px',
+      value: 0
+    }, {
+      unit: 'px',
+      value: 0
+    }],
+    fontFamily: 'open sans'
+  }
+});
