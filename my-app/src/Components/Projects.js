@@ -10,22 +10,17 @@ class Projects extends React.Component {
     if (this.props.projects) {
       projectItems = this.props.projects.map(project => {
 
-        return ( <
-          ProjectItem key = {
-            project.title
-          }
-          project = {
-            project
-          }
-          />
+        return ( 
+          <ProjectItem key = {project.title}
+            project = {project}/>
         );
       });
     }
-    return ( <
-      div className = "Projects" > {
-        projectItems
-      } <
-      /div>
+    return (
+      <div className = "Projects" > {
+        {projectItems}
+      } 
+      </div>
     );
   }
 }
