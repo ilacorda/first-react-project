@@ -1,36 +1,6 @@
-import {
-  StyleSheet
-}
-from 'react-native';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
 
-export default StyleSheet.create({
-  body: {
-    margin: [{
-      unit: 'px',
-      value: 0
-    }, {
-      unit: 'px',
-      value: 0
-    }, {
-      unit: 'px',
-      value: 0
-    }, {
-      unit: 'px',
-      value: 0
-    }],
-    padding: [{
-      unit: 'px',
-      value: 0
-    }, {
-      unit: 'px',
-      value: 0
-    }, {
-      unit: 'px',
-      value: 0
-    }, {
-      unit: 'px',
-      value: 0
-    }],
-    fontFamily: 'open sans'
-  }
-});
+ReactDOM.render(<App />, document.getElementById('root'));

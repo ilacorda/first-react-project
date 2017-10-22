@@ -17,9 +17,8 @@ class Projects extends React.Component {
       });
     }
     return (
-      <div className = "Projects" > {
+      <div className = "Projects"> 
         {projectItems}
-      } 
       </div>
     );
   }

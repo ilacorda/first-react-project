@@ -1,50 +1,47 @@
-import {
-  StyleSheet
-}
-from 'react-native';
+import React, { Component } from 'react';
+import Projects from './Components/Projects';
+import AddProjects from './Components/AddProjects';
+import logo from './invoice.png';
+import './App.css';
 
-export default StyleSheet.create({
-  App: {
-    textAlign: 'center'
-  },
-  'App-logo': {
-    animation: 'App-logo-spin infinite 20s linear',
-    height: [{
-      unit: 'px',
-      value: 80
-    }]
-  },
-  'App-header': {
-    backgroundColor: '#222',
-    height: [{
-      unit: 'px',
-      value: 150
-    }],
-    padding: [{
-      unit: 'px',
-      value: 20
-    }, {
-      unit: 'px',
-      value: 20
-    }, {
-      unit: 'px',
-      value: 20
-    }, {
-      unit: 'px',
-      value: 20
-    }],
-    color: 'white'
-  },
-  'App-title': {
-    fontSize: [{
-      unit: 'em',
-      value: 1.5
-    }]
-  },
-  'App-intro': {
-    fontSize: [{
-      unit: 'string',
-      value: 'large'
-    }]
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      projects: []
+    }
   }
-});
+  
+  
+  componentWillMount(){
+    this.setState({projects: [
+    {
+      title: 'Project 1',
+      category: 'Tutorials'
+    },
+    {
+      title: 'Project 2',
+      category: 'Challenges'
+    },
+    {
+      title: 'Project 3',
+      category: 'Assignments'
+    }
+  ]});
+  }
+  
+  render() {
+    return (
+      <div className="App">
+        
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
+          <AddProjects/>
+        <Projects projects = {this.state.projects}/>
+      </div>
+    );
+  }
+}
+
+export default App;

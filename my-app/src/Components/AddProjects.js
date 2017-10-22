@@ -24,22 +24,20 @@ class AddProjects extends React.Component {
 					newProject: {
 						title: this.refs.title.value,
 						category: this.refs.category.value
-					}
-				}, function() {
-					console.log(this.state);
+					}}, function() {
+								console.log(this.state);
 				});
 			}
 			e.preventDefault();
 		}
 		render() {
 			let categoryOptions = this.props.categories.map(category => {
-					return <option key = {category} value = "category"> {
-						{category} </option>
+					return <option key = {category} value = "category">{category}</option>
 					});
 				return ( 
 					<div>
 						<h3>Add Projects</h3>   
-						<form onSubmit = {this.handleSubmit.bind(this)} 
+						<form onSubmit={this.handleSubmit.bind(this)}> 
 							<div>
 								<label>Title</label><br/>
 								<input type = "text" ref = "title"/>
